@@ -3,7 +3,7 @@ import { colors } from "../../utils/colors"
 
 export const styles = StyleSheet.create({
     container: {
-        margin: 24,
+        // margin: 24,
         flexDirection: 'row',
         alignItems: 'center',
         marginBottom: 54

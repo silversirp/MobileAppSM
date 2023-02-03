@@ -5,9 +5,9 @@ export const styles = StyleSheet.create({
     container: {
         backgroundColor: colors.blue,
         paddingVertical: 20,
-        paddingHorizontal: 8,
+        // paddingHorizontal: 8,
         borderRadius: 8,
-        width: '100%'
+        // width: '100%'
         // height: 60,
         // position: "absolute",
         // right: 36,

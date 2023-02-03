@@ -8,8 +8,8 @@ export const styles = StyleSheet.create({
         borderRadius: 4,
         width: 22,
         height: 22,      
-        marginRight: '8%',
-        marginLeft: '8%'
+        // marginRight: '8%',
+        // marginLeft: '8%'
     },
 
     innerContainer: {

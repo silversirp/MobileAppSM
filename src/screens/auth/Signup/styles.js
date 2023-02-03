@@ -3,7 +3,7 @@ import { colors } from "../../../utils/colors"
 
 export const styles = StyleSheet.create({
    container: {
-    //padding: 24
+    padding: 24
    },
 
    agreeRow: {
@@ -22,8 +22,8 @@ export const styles = StyleSheet.create({
 
    button: {
     marginVertical: 20,
-    marginLeft: '8%',
-    marginRight: '8%',
-    width: '84%'
+    // marginLeft: '8%',
+    // marginRight: '8%',
+    // width: '84%'
    }
 })

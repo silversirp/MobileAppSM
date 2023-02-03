@@ -4,8 +4,8 @@ import { colors } from "../../utils/colors";
 export const styles = StyleSheet.create({
     container: {    
         marginBottom: 20,
-        marginRight: '8%',
-        marginLeft: '8%'
+        // marginRight: '8%',
+        // marginLeft: '8%'
     },
 
     inputContainer: {
