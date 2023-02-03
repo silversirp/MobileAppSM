@@ -18,5 +18,12 @@ export const styles = StyleSheet.create({
 
    agreeTextBold: {
     fontWeight: '600'
+   },
+
+   button: {
+    marginVertical: 20,
+    marginLeft: '8%',
+    marginRight: '8%',
+    width: '84%'
    }
 })
