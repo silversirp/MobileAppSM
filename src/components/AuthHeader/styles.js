@@ -3,9 +3,10 @@ import { colors } from "../../utils/colors"
 
 export const styles = StyleSheet.create({
     container: {
-        padding: 24,
+        margin: 24,
         flexDirection: 'row',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginBottom: 54
     },
 
     image: {
