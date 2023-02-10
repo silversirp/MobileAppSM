@@ -41,12 +41,7 @@ export const styles = StyleSheet.create({
         width: '100%',
         paddingVertical: 8,
         paddingHorizontal: 20,
-        // borderWidth: 1,
         marginTop: 30,
-        // height: 60,
-        // position: "absolute",
-        // right: 36,
-        // bottom: -160,
         textAlign: "center"
     }
 
