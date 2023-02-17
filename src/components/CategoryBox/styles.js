@@ -11,11 +11,12 @@ export const styles = StyleSheet.create({
 
     image: {
         width: 32,
-        height: 32
+        height: 32,
+        borderRadius: 8
     },
 
     title: {
-        color: colors.grey
+        color: colors.textGrey
     },
 
     imageContainer: {
@@ -23,6 +24,10 @@ export const styles = StyleSheet.create({
         padding: 8,
         borderRadius: 8,
         marginBottom: 8
+    },
+
+    price: {
+        color: colors.black
     }
 
 
