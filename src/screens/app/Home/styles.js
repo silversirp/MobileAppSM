@@ -6,31 +6,8 @@ export const styles = StyleSheet.create({
     padding: 24
    },
 
-   agreeRow: {
-    flexDirection: 'row',
-    alignItems: 'center'
-   },
-
-   agreeText: {
-    color: colors.blue,
-    marginHorizontal: 14
-   },
-
-   agreeTextBold: {
-    fontWeight: '600'
-   },
-
-   button: {
-    marginVertical: 20,
-   },
-
-   footerText: {
-      color: colors.blue,
-      marginBottom: 56,
-      textAlign: "center"
-   },
-
-   footerLink: {
-      fontWeight: 'bold'
+   list: {
+      paddingVertical: 24,
+      color: colors.black  
    }
 })
