@@ -8,6 +8,7 @@ import Splash from "./src/screens/auth/Splash";
 import Home from "./src/screens/app/Home";
 import Favourites from "./src/screens/app/Favorites";
 import Profile from "./src/screens/app/Profile";
+import ProductDetails from "./src/screens/app/ProductDetails";
 
 import { GoogleSignin } from "@react-native-google-signin/google-signin";
 import Config from "react-native-config";
@@ -21,6 +22,8 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
 import { Image } from "react-native";
+
+
 
 const Stack = createNativeStackNavigator();
 
@@ -88,6 +91,7 @@ const App = () => {
           isSignedIn ? (
             <>
               <Stack.Screen name="Tabs" component={Tabs} options={{headerShown: false}} />
+              <Stack.Screen name="ProductDetails" component={ProductDetails} options={{headerShown: false}}/>
             </>
           ) : (
             <>
