@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text } from "react-native";
+import { ScrollView, Text, Image, View } from "react-native";
 import { styles } from "./styles";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -9,9 +9,14 @@ const ProductDetails = ({navigation, route}) => {
     console.log('product => ', product)
     return (
         <SafeAreaView>
-            <View style={styles.container}>
-                <Text>{product?.title}</Text>
-            </View>
+            <ScrollView>
+                <Image style={styles.image} source={{uri: product?.image}}/>
+                <View style={styles.content}>
+                    <Text style={styles.title}>{product?.title}</Text>
+                    <Text style={styles.price}>{product?.price}</Text>
+                    <Text style={styles.description}>{product?.description}</Text>
+                </View>
+            </ScrollView>
         </SafeAreaView>
     )
 }
