@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Dimensions, FlatList, Image, View } from "react-native";
 import { styles } from "./styles";
 
+
 const {width} = Dimensions.get('window')
 
 const ImageCarusel = ({images}) => {
@@ -11,7 +12,6 @@ const ImageCarusel = ({images}) => {
         const horizontalOffset = event.nativeEvent.contentOffset.activeIndex
         const index = horizontalOffset / width
         setActiveIndex(index)
-
     }
 
     const renderImage = ({item}) => {
