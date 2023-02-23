@@ -25,8 +25,8 @@ export const styles = StyleSheet.create({
    },
 
    icon: {
-      width: 24,
-      height: 24
+      height: 30,
+      width: 24
    },
 
    button: {

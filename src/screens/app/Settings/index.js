@@ -37,13 +37,12 @@ const Settings = () => {
                     <Pressable onPress={onEditPress}>
                         <Image style={styles.icon} source={require('../../../assets/edit.png')}/>
                     </Pressable>
-
                 </View>
-                <EditableBox onChangeText={(v) => onChange('name', v)} label="Name" value={values.name} editable={editing}/>
+                <EditableBox onChangeText={(v) => onChange('name', v)} label='Name' value={values.name} editable={editing}/>
                 <EditableBox onChangeText={(v) => onChange('email', v)} label="Email" value={values.email} editable={editing}/>
                 {editing ? (<Button style={styles.button} onPress={onSave} title="Save"/>) : null}
 
-                <Text style={styles.sectionTitle}>Help Center</Text>
+                <Text style={[styles.sectionTitle, {marginTop: 40}]}>Help Center</Text>
                 <ListItem onPress={onItemPress} style={styles.item} title="FAQ" />
                 <ListItem onPress={onItemPress} style={styles.item} title="Contact Us" />
                 <ListItem onPress={onItemPress} style={styles.item} title="Privacy & Terms" />
