@@ -3,34 +3,25 @@ import { colors } from "../../../utils/colors"
 
 export const styles = StyleSheet.create({
    container: {
-    padding: 24
+    padding: 24,
+    flex: 1
    },
 
-   agreeRow: {
-    flexDirection: 'row',
-    alignItems: 'center'
+   name: {
+      fontSize: 20,
+      fontWeight: '500',
+      color: colors.black,
+      marginBottom: 12
    },
 
-   agreeText: {
-    color: colors.blue,
-    marginHorizontal: 14
+   email: {
+      fontSize: 14,
+      color: colors.grey
    },
 
-   agreeTextBold: {
-    fontWeight: '600'
-   },
-
-   button: {
-    marginVertical: 20,
-   },
-
-   footerText: {
-      color: colors.blue,
-      marginBottom: 56,
-      textAlign: "center"
-   },
-
-   footerLink: {
-      fontWeight: 'bold'
+   content: {
+      flex: 1
    }
+
+  
 })
