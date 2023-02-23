@@ -20,22 +20,17 @@ export const styles = StyleSheet.create({
         borderRadius: 4
     },
 
-    title: {
+    input: {
         color: colors.blue,
-        fontSize: 18,
+        fontSize: 14,
         fontWeight: '500',
 
     },
 
-    subtitle: {
+    label: {
         color: colors.grey,
         fontSize: 12,
         marginTop: 6
-    },
-
-    arrow: {
-        height: 32,
-        width: 32
     }
 
 })
