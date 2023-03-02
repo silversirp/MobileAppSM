@@ -3,10 +3,8 @@ import { colors } from "../../utils/colors"
 
 export const styles = StyleSheet.create({
     container: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        padding: 16,
+        paddingHorizontal: 16,
+        paddingVertical: 12,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -30,7 +28,8 @@ export const styles = StyleSheet.create({
     label: {
         color: colors.grey,
         fontSize: 12,
-        marginTop: 6
+        marginTop: 6,
+        paddingBottom: 6
     }
 
 })

@@ -38,7 +38,8 @@ const Settings = () => {
                         <Image style={styles.icon} source={require('../../../assets/edit.png')}/>
                     </Pressable>
                 </View>
-                <EditableBox onChangeText={(v) => onChange('name', v)} label='Name' value={values.name} editable={editing}/>
+                
+                <EditableBox onChangeText={(v) => onChange('name', v)} label='Name'  value={values.name} editable={editing}/>
                 <EditableBox onChangeText={(v) => onChange('email', v)} label="Email" value={values.email} editable={editing}/>
                 {editing ? (<Button style={styles.button} onPress={onSave} title="Save"/>) : null}
 
