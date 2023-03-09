@@ -44,11 +44,14 @@ const Signup = ({navigation}) => {
             console.log('signup => ', response);
             const {email, password} = values
             axios.post('http://192.168.18.4/api/user/login', values)
-            .then(response => {
+            .then(async (response) => {
                 console.log('login => ', response)
                 const accessToken = response?.data?.accessToken
                 console.log(accessToken)
                 setUser({accessToken})
+                if (response?.data?.token) {
+                    await AsyncStorage.setItem('auth_token', `${response?.data?.token}`)
+                }
             })
             .catch(error => {
                 console.log('catch1 => ', error)

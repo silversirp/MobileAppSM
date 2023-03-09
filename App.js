@@ -83,6 +83,13 @@ const App = () => {
   const [user, setUser] = useState()
 
   useEffect(() => {
+    (async () => {
+      const accessToken = await AsyncStorage.getItem('auth_token')
+      setUser({ accessToken})
+    })()
+  }, [])
+
+  useEffect(() => {
     GoogleSignin.configure({
       scopes: ['https://www.googleapis.com/auth/drive.readonly'],
       webClientId: Config.GOOGLE_WEB_CLIENT_ID,
