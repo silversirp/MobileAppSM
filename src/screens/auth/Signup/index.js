@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { View, Text, Alert } from "react-native";
 import AuthHeader from "../../../components/AuthHeader";
 import Input from "../../../components/Input";
@@ -9,10 +9,13 @@ import Separator from "../../../components/Separator";
 import GoogleLogin from "../../../components/GoogleLogin";
 
 import { SafeAreaView } from "react-native-safe-area-context";
+import axios from "axios";
+import { UserContext } from "../../../../App";
 
 const Signup = ({navigation}) => {
     const [checked, setChecked] = useState(false)
     const [values, setValues] = useState({})
+    const {user, setUser} = useContext(UserContext)
     
     const onBack = () => {
         navigation.goBack()
@@ -31,6 +34,31 @@ const Signup = ({navigation}) => {
             Alert.alert('All fields are required')
             return
         }
+
+        if(!checked){
+            Alert.alert('Please agree with the terms')
+            return
+        }
+        axios.post('http://192.168.18.4/api/user/register', values)
+        .then(response => {
+            console.log('signup => ', response);
+            const {email, password} = values
+            axios.post('http://192.168.18.4/api/user/login', values)
+            .then(response => {
+                console.log('login => ', response)
+                const accessToken = response?.data?.accessToken
+                console.log(accessToken)
+                setUser({accessToken})
+            })
+            .catch(error => {
+                console.log('catch1 => ', error)
+            })
+        })
+        .catch(error => {
+            console.log('catch2 => ',  error)
+        })
+
+
         console.log('value => ', values)
     }
 
